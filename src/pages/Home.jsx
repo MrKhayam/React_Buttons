@@ -23,10 +23,12 @@ const Home = () => {
 
   const [isClicked, setIsClicked] = useState(true);
     const [btnTxt, setBtnTxt] = useState('');
+    const [btnStylehook, setBtnStylehook] = useState('');
 
-    const handleClick1 = (btnType) => {
+    const handleClick1 = (btnType,btnStyle) => {
         setIsClicked(true);
         setBtnTxt(btnType);
+        setBtnStylehook(btnStyle)
     }
     const handleCross1 = () => {
         setIsClicked(false);
@@ -61,7 +63,7 @@ const Home = () => {
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`import { BtnSimple } from 'react-buttons-library' `}</p>
+                <p className="p-3 md:p-0 text-white">{`import { ${btnStylehook} } from 'react-buttons-library' `}</p>
               </div>
             </div>
             <h1 className='text-white text-2xl font-semibold mt-10'>Usage</h1>
@@ -79,7 +81,7 @@ const Home = () => {
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`<BtnSimple label='Click Me' btnClass='${btnTxt}' onClick={() => alert('Clicked')} />`}</p>
+                <p className="p-3 md:p-0 text-white">{`<${btnStylehook} label='Click Me' btnClass='${btnTxt}' onClick={() => alert('Clicked')} />`}</p>
               </div>
             </div>
             </div>

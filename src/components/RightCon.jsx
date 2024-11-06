@@ -2,6 +2,8 @@ import Header from './Header';
 import { Routes, Route } from 'react-router-dom';
 import Docs from './Docs';
 import SimpleButtons from './SimpleButtons';
+import RoundedButtons from './RoundedButtons';
+import OutlineButtons from './OutlineButtons';
 
 
 const RightCon = ({isClick, handleClick1}) => {
@@ -11,6 +13,10 @@ const RightCon = ({isClick, handleClick1}) => {
      <Routes>
         <Route path='/' element= {<Docs />} />
         <Route path='/simple' element= {<SimpleButtons handleClick1={handleClick1
+          } />} />
+        <Route path='/rounded' element= {<RoundedButtons handleClick1={handleClick1
+          } />} />
+        <Route path='/outline' element= {<OutlineButtons handleClick1={handleClick1
           } />} />
      </Routes>
     </div>
