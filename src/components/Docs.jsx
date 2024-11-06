@@ -98,7 +98,7 @@ const Docs = () => {
           <div className="left">
             <div className="heading flex gap-5 items-center">
               <div className="flex items-center justify-center w-8 h-8 bg-[#07070763] rounded-md">
-                <h1 className="text-white font-bold">2</h1>
+                <h1 className="text-white font-bold">3</h1>
               </div>
               <h1 className="">Use the button in your component</h1>
             </div>
