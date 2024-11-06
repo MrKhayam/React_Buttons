@@ -1,6 +1,7 @@
 import Header from './Header';
 import { Routes, Route } from 'react-router-dom';
 import Docs from './Docs';
+import SimpleButtons from './SimpleButtons';
 
 
 const RightCon = ({isClick}) => {
@@ -9,6 +10,7 @@ const RightCon = ({isClick}) => {
      <Header isClick={isClick} />
      <Routes>
         <Route path='/' element= {<Docs />} />
+        <Route path='/simple' element= {<SimpleButtons />} />
      </Routes>
     </div>
   );
