@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { FaAngleRight } from "react-icons/fa";
 import Footer from "./Footer";
+import toast from "react-hot-toast";
 
 
 const Docs = () => {
+
+  const copyText = (toCopy) => {
+    window.navigator.clipboard.writeText(document.querySelector(toCopy).innerText);
+    toast.success("Code Copied Successfully.");
+  }
+  
+  
+  
   return (
     <>
       <div className="w-full h-full md:p-4 py-4">
@@ -45,11 +54,12 @@ const Docs = () => {
                   cursor="pointer"
                   size={20}
                   className="mr-1 mt-1"
+                  onClick={() => {copyText('.installation')}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0">npm install react-butons-library</p>
+                <p className="p-3 md:p-0 installation">npm install react-butons-library</p>
               </div>
             </div>
           </div>
@@ -82,11 +92,12 @@ const Docs = () => {
                   cursor="pointer"
                   size={20}
                   className="mr-1 mt-1"
+                  onClick={() => {copyText('.import')}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0">{`import { BtnSimple } from 'react-buttons-library'`}</p>
+                <p className="p-3 md:p-0 import">{`import { BtnSimple } from 'react-buttons-library'`}</p>
               </div>
             </div>
           </div>
@@ -116,10 +127,11 @@ const Docs = () => {
                   cursor="pointer"
                   size={20}
                   className="mr-1 mt-1"
+                  onClick={() => {copyText('.codeToCopy')}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center overflow-x-scroll hide-scrollbar">
-              <p className="p-3"><pre>{`import React from 'react'
+              <p className="p-3 codeToCopy"><pre className="">{`import React from 'react'
 import { BtnSimple } from 'react-buttons-library'
 const App = () => {
   return (

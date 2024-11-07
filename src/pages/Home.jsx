@@ -5,10 +5,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { FaAngleRight } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Home = () => {
 
-
+  const copyText = (toCopy) => {
+    window.navigator.clipboard.writeText(document.querySelector(toCopy).innerText);
+    toast.success("Code Copied Successfully.");
+  }
 
 
 
@@ -99,11 +103,12 @@ const Home = () => {
                   size={20}
                   color="white"
                   className="mr-1 mt-1"
+                  onClick={() => {copyText(".copy1")}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`import { ${btnStylehook} } from 'react-buttons-library' `}</p>
+                <p className="p-3 md:p-0 text-white copy1">{`import { ${btnStylehook} } from 'react-buttons-library' `}</p>
               </div>
             </div>
             <h1 className="text-white text-2xl font-semibold mt-10">Usage</h1>
@@ -117,11 +122,12 @@ const Home = () => {
                   size={20}
                   color="white"
                   className="mr-1 mt-1"
+                  onClick={() => {copyText(".copy2")}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`<${btnStylehook} label='Click Me' btnClass='${btnTxt}' onClick={() => alert('Clicked')} />`}</p>
+                <p className="p-3 md:p-0 text-white copy2">{`<${btnStylehook} label='Click Me' btnClass='${btnTxt}' onClick={() => alert('Clicked')} />`}</p>
               </div>
             </div>
           </div>
@@ -167,11 +173,12 @@ const Home = () => {
                   size={20}
                   color="white"
                   className="mr-1 mt-1"
+                  onClick={() => {copyText(".copy3")}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`<button className="customBtn">Custom Button</button>`}</p>
+                <p className="p-3 md:p-0 text-white copy3">{`<button className="customBtn">Custom Button</button>`}</p>
               </div>
             </div>
             <h1 className="text-white text-2xl font-semibold mt-10">Css Code</h1>
@@ -185,11 +192,12 @@ const Home = () => {
                   size={20}
                   color="white"
                   className="mr-1 mt-1"
+                  onClick={() => {copyText(".copy4")}}
                 />
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <pre className="p-3 md:p-0 text-white">{`.customBtn {
+                <pre className="p-3 md:p-0 text-white copy4">{`.customBtn {
     ${
       isToggled
         ? `background-color: transparent;`
