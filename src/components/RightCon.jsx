@@ -4,9 +4,10 @@ import Docs from './Docs';
 import SimpleButtons from './SimpleButtons';
 import RoundedButtons from './RoundedButtons';
 import OutlineButtons from './OutlineButtons';
+import Custom from './Custom';
 
 
-const RightCon = ({isClick, handleClick1}) => {
+const RightCon = ({isClick, handleClick1, handleGenerate}) => {
   return (
     <div className='rightCon w-[81%] p-4  h-full backdrop-blur-md text-white bg-[#ffffff25] overflow-scroll hide-scrollbar'>
      <Header isClick={isClick} />
@@ -18,6 +19,7 @@ const RightCon = ({isClick, handleClick1}) => {
           } />} />
         <Route path='/outline' element= {<OutlineButtons handleClick1={handleClick1
           } />} />
+        <Route path='/custom' element= {<Custom handleGenerate={handleGenerate} />} />
      </Routes>
     </div>
   );

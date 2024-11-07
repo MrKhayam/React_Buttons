@@ -10,8 +10,9 @@ const OutlineButtons = ({handleClick1}) => {
 
 
 
+
       <h1 className="text-[#9064ff] text-xl font-semibold md:mt-0 mt-3 ">
-            Rounded Buttons
+            Outline Buttons
           </h1>
          <div className="w-full h-auto flex flex-wrap gap-5 justify-center
           cards mt-10">

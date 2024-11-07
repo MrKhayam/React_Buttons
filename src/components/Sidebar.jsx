@@ -21,7 +21,7 @@ const Sidebar = ({isNav,isCross}) => {
             <NavLink to="/simple" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Simple Buttons</NavLink>
             <NavLink to="/rounded" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Rounded Buttons</NavLink>
             <NavLink to="/outline" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Outline Buttons</NavLink>
-            <NavLink to="/custom" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Custom Button</NavLink>
+            <NavLink to="/custom" className={({isActive}) => `md:block hidden text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Custom Button</NavLink>
             
           </ul>
         </div>
@@ -49,7 +49,7 @@ const Sidebar = ({isNav,isCross}) => {
           <NavLink onClick={isCross} to="/simple" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Simple Buttons</NavLink>
           <NavLink onClick={isCross} to="/rounded" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Rounded Buttons</NavLink>
           <NavLink onClick={isCross} to="/outline" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Outline Buttons</NavLink>
-          <NavLink onClick={isCross} to="/custom" className={({isActive}) => `text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Custom Button</NavLink>
+          <NavLink onClick={isCross} to="/custom" className={({isActive}) => `md:block hidden text-md whitespace-nowrap cursor-pointer px-3 py-2 transition-all duration-200 hover:bg-[#07070763] rounded-lg ${isActive ? 'bg-[#07070763] text-[#9064ff]' : 'bg-transparent'}`}>Custom Button</NavLink>
           </ul>
         </div>
         <div className="sideBottom">
