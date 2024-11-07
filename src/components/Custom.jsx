@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { IoClose } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+// import { IoClose } from "react-icons/io5";
+// import { NavLink } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 // import CssCode from "./CssCode";
 // import TailwindCode from "./TailwindCode";
 
@@ -16,24 +16,15 @@ const Custom = ({handleGenerate}) => {
   const [borderSize, setBorderSize] = useState(0);
   const [isToggled, setIsToggled] = useState(false);
 
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => {
-    setIsClicked(true);
-  };
-  const handleCross = () => {
-    setIsClicked(false);
-  };
-
   const toggleTheme = () => {
     setIsToggled(!isToggled);
   };
   return (
     <>
       <div className="w-full h-full flex flex-col">
-        <div className="flex items-center justify-center w-full h-[30%]">
+        <div className="md:flex hidden items-center justify-center w-full h-[30%]">
           <button
-            onClick={handleGenerate}
+            onClick={() => handleGenerate(background, color, borderRadiusVal, borderVal, paddingX,paddingY,textSize, borderSize, isToggled)}
             style={{
               backgroundColor: isToggled ? "transparent" : background,
               color: color,
@@ -51,7 +42,10 @@ const Custom = ({handleGenerate}) => {
         </div>
         <div className="w-full h-[70%]">
           <div className="w-[100%] outerCont h-full mx-auto">
-            <div className="flex flex-col bg-[#07070763] items-center justify-center w-full h-[80%] rounded-xl">
+            <div className="w-full h-auto text-center md:hidden mt-10">
+              <h1 className="text-xl">Use Desktop to Create Custom Buttons.</h1>
+            </div>
+            <div className="md:flex hidden flex-col bg-[#07070763] items-center justify-center w-full h-[80%] rounded-xl">
               <h1 className="mb-10 text-3xl font-semibold text-[#fff]">
                 Toolbar
               </h1>

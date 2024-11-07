@@ -7,6 +7,26 @@ import { HiOutlineClipboardList } from "react-icons/hi";
 import { FaAngleRight } from "react-icons/fa";
 
 const Home = () => {
+
+
+
+
+
+
+
+  const [background, setBackground] = useState("#ffffff");
+  const [color, setColor] = useState("#000000");
+  const [borderRadiusVal, setBorderRadiusVal] = useState(0);
+  const [borderVal, setBorderVal] = useState("#00000");
+  const [paddingX, setPaddingX] = useState(0);
+  const [paddingY, setPaddingY] = useState(0);
+  const [textSize, setTextSize] = useState(15);
+  const [borderSize, setBorderSize] = useState(0);
+  const [isToggled, setIsToggled] = useState(false);
+  
+  
+  
+  
   const [isNav, setIsNav] = useState(false);
 
   const handleClick = () => {
@@ -18,8 +38,17 @@ const Home = () => {
 
   const [isGenerate, setIsGenerate] = useState(false);
 
-  const handleGenerate = () => {
+  const handleGenerate = (background, color, borderRadiusVal, borderVal, paddingX,paddingY,textSize, borderSize, isToggled ) => {
     setIsGenerate(true);
+    setBackground(background);
+    setColor(color);
+    setBorderRadiusVal(borderRadiusVal);
+    setBorderVal(borderVal);
+    setPaddingX(paddingX);
+    setPaddingY(paddingY);
+    setTextSize(textSize);
+    setBorderSize(borderSize);
+    setIsToggled(isToggled);
   };
 
   const [isClicked, setIsClicked] = useState(false);
@@ -127,25 +156,7 @@ const Home = () => {
               cursor="pointer"
             />
 
-            <h1 className="text-white text-2xl font-semibold mt-10">Import</h1>
-            <div className="codeBlock w-full mt-4 min-h-20 flex flex-col rounded-md bg-[#0e1622]">
-              <div className="flex justify-between w-full h-auto items-center">
-                <div className="w-20 h-7 rounded-br-md rounded-tl-md flex items-center justify-center bg-[#2c3c53]">
-                  <p className="text-sm text-[#9064ff]">Terminal</p>
-                </div>
-                <HiOutlineClipboardList
-                  cursor="pointer"
-                  size={20}
-                  color="white"
-                  className="mr-1 mt-1"
-                />
-              </div>
-              <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
-                <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`import { ${btnStylehook} } from 'react-buttons-library' `}</p>
-              </div>
-            </div>
-            <h1 className="text-white text-2xl font-semibold mt-10">Usage</h1>
+            <h1 className="text-white text-2xl font-semibold mt-10">React Code</h1>
             <div className="codeBlock w-full mt-4 min-h-20 flex flex-col rounded-md bg-[#0e1622]">
               <div className="flex justify-between w-full h-auto items-center">
                 <div className="w-20 h-7 rounded-br-md rounded-tl-md flex items-center justify-center bg-[#2c3c53]">
@@ -160,7 +171,39 @@ const Home = () => {
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 text-white">{`<${btnStylehook} label='Click Me' btnClass='${btnTxt}' onClick={() => alert('Clicked')} />`}</p>
+                <p className="p-3 md:p-0 text-white">{`<button className="customBtn">Custom Button</button>`}</p>
+              </div>
+            </div>
+            <h1 className="text-white text-2xl font-semibold mt-10">Css Code</h1>
+            <div className="codeBlock w-full mt-4 min-h-20 flex flex-col rounded-md bg-[#0e1622]">
+              <div className="flex justify-between w-full h-auto items-center">
+                <div className="w-20 h-7 rounded-br-md rounded-tl-md flex items-center justify-center bg-[#2c3c53]">
+                  <p className="text-sm text-[#9064ff]">Css</p>
+                </div>
+                <HiOutlineClipboardList
+                  cursor="pointer"
+                  size={20}
+                  color="white"
+                  className="mr-1 mt-1"
+                />
+              </div>
+              <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
+                <FaAngleRight color="#9064ff" />
+                <pre className="p-3 md:p-0 text-white">{`.customBtn {
+    ${
+      isToggled
+        ? `background-color: transparent;`
+        : `background-color: ${background};`
+    }
+    color: ${color};
+    padding-left: ${paddingX}px;
+    padding-right: ${paddingX}px;
+    padding-top: ${paddingY}px;
+    padding-bottom: ${paddingY}px;
+    ${borderSize > 0 ? `border: ${borderSize}px solid ${borderVal};` : 'border: none;'}
+    font-size: ${textSize}px;
+    border-radius: ${borderRadiusVal}px;
+  }`}</pre>
               </div>
             </div>
           </div>
