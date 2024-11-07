@@ -28,7 +28,7 @@ const Sidebar = ({isNav,isCross}) => {
         <div className="sideBottom">
             <div className="github flex gap-3 w-full items-center transition-all duration-200 hover:bg-[#07070763] rounded-lg px-4 py-3 cursor-pointer">
                 <FaGithub size={40} />
-                <h1 className="text-[1.3vw] whitespace-nowrap">Github Repository</h1>
+                <a href="https://github.com/MrKhayam/React_Buttons" target="blank" className="text-[1.3vw] whitespace-nowrap">Github Repository</a>
             </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Sidebar = ({isNav,isCross}) => {
         <div className="sideBottom">
             <div className="github flex gap-3 w-full items-center transition-all duration-200 hover:bg-[#07070763] rounded-lg px-4 py-3 cursor-pointer">
                 <FaGithub size={40} />
-                <h1 className="text-lg whitespace-nowrap">Github Repository</h1>
+                <a href="https://github.com/MrKhayam/React_Buttons" className="text-lg whitespace-nowrap">Github Repository</a>
             </div>
         </div>
       </div>
