@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-// import { IoClose } from "react-icons/io5";
-// import { NavLink } from "react-router-dom";
-// import { Routes, Route } from "react-router-dom";
-// import CssCode from "./CssCode";
-// import TailwindCode from "./TailwindCode";
 
 const Custom = ({handleGenerate}) => {
   const [background, setBackground] = useState("#ffffff");
@@ -37,7 +32,7 @@ const Custom = ({handleGenerate}) => {
               fontSize: `${textSize}px`,
             }}
           >
-            Click Me
+            Generate Code
           </button>
         </div>
         <div className="w-full h-[70%]">

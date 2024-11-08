@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { HiOutlineClipboardList } from "react-icons/hi";
 import { FaAngleRight } from "react-icons/fa";
 import Footer from "./Footer";
@@ -59,7 +58,7 @@ const Docs = () => {
               </div>
               <div className="code mt-2 px-3 w-full h-auto flex gap-3 items-center">
                 <FaAngleRight color="#9064ff" />
-                <p className="p-3 md:p-0 installation">npm install react-butons-library</p>
+                <p className="p-3 md:p-0 installation">npm install react-buttons-library</p>
               </div>
             </div>
           </div>
